@@ -1,0 +1,34 @@
+.card {
+    background-color: #FFCDCD;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px;
+}
+
+.card h5 {
+    font-size: 1.5em;
+}
+
+.taskText {
+    font-size: 1em;
+}
+
+.taskList {
+    border-radius: 15px;
+}
+
+.taskList li {
+    border-radius: 15px;
+}
+
+.buttonIcon {
+    font-size: 1.3em;
+    color: gray;
+}
+
+.checkbox {
+    transform: scale(1.4);
+}
+
+.addTaskButton {
+    color: gray;
+}
