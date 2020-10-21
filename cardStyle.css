@@ -4,8 +4,15 @@
     border-radius: 15px;
 }
 
-.card h5 {
+.titleInput {
     font-size: 1.5em;
+    background-color: #FFCDCD;
+    border: none;
+}
+
+#newToDoInput {
+    border: none;
+    background-color: #ffcdcd9a;
 }
 
 .taskText {
@@ -29,6 +36,26 @@
     transform: scale(1.4);
 }
 
+.textFieldListItem {
+    background-color: #FFCDCD;
+    border: 1px solid gray;
+}
+
 .addTaskButton {
     color: gray;
+}
+
+.userInputForm {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 479px) {
+    .card {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .editUserInput input {
+        width: 140px;
+    }
 }
