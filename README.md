@@ -1,5 +1,4 @@
-# to-do-list
-A To-Do List
+# To-Do-list
 
 To-Do List for travellers.
 Possibility to add tasks, edit and delete them.
