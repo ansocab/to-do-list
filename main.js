@@ -10,17 +10,20 @@ let validateButton;
 let myList = new List("My List", ".listContainer");
 myList.render();
 
+edButtonsAddEvHandler();
+checkboxAddEvHandler();
+
 // ADD LIST TITLE
 const textFieldTemplate = `
 <li class="list-group-item d-flex justify-content-between align-items-center mb-1 mt-1 pt-1 pr-1 pb-1 textFieldListItem">
     <form class="pl-4 ml-2 taskText userInputForm">
         <input type="text" id="newToDoInput" class="mt-2 mb-2"/>
     </form>
-    <span>
+    <div>
         <button type="button" class="btn pt-0 pb-0 mt-0 mb-0 validateButton buttonIcon" style="display: none">
             <i class="fas fa-plus-circle"></i>
         </button>
-    </span>
+    </div>
 </li>
 `
 
@@ -47,6 +50,8 @@ function showTextField() {
             resetNewTaskField();
         }
     })
+
+    console.log(myList);
 }
 
 function addInputEventListeners() {
@@ -67,6 +72,7 @@ function handleSubmit(event) {
     if(userInput.value) {
         myList.addItem(userInput.value);
         edButtonsAddEvHandler();
+        checkboxAddEvHandler()
         addTaskButton.style.display = "block";
     }
 }
@@ -78,17 +84,16 @@ function resetNewTaskField() {
         addTaskButton.style.display = "block";
     }
     edButtonsAddEvHandler();
+    checkboxAddEvHandler()
 }
 
 
 // EDIT AND DELETE TASKS
-    edButtonsAddEvHandler();
-
     function edButtonsAddEvHandler() {
         let editDeleteButtons = document.querySelectorAll(".edButton");
         editDeleteButtons.forEach((button) => {
             button.onclick = this.handleClick;
-        })    
+        })
     }
 
     function handleClick() {
@@ -100,7 +105,7 @@ function resetNewTaskField() {
             prepareEditItem(buttonIndex)
             edButtonsAddEvHandler();
         }
-    }   
+    }
 
     function prepareEditItem(index) {
         let taskTextElement = document.querySelector(`#t-${index}`);
@@ -116,4 +121,20 @@ function resetNewTaskField() {
             myList.editItem(newUserInput.value, index);
             edButtonsAddEvHandler();
         })
+    }
+
+    // CHECKBOX
+    function checkboxAddEvHandler() {
+        let checkboxes = document.querySelectorAll(".checkbox")
+        checkboxes.forEach((box) => {
+            box.onchange = this.handleCheck;
+        });
+    }
+
+    function handleCheck() {
+        const checkboxIndex = this.id.split("-")[1];
+        let taskDone = myList.items[checkboxIndex].done;
+        taskDone ? myList.items[checkboxIndex].done = false : myList.items[checkboxIndex].done = true;
+        myList.render();
+        checkboxAddEvHandler();
     }
