@@ -1,0 +1,118 @@
+.card {
+    background-color: #FFCDCD;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px;
+}
+
+.toDoLists {
+    display: flex;
+}
+
+.titleInput {
+    font-size: 1.5em;
+    background-color: #FFCDCD;
+    border: none;
+}
+
+.titleInput:hover::placeholder {
+    color: black
+}
+
+#newToDoInput {
+    border: none;
+    background-color: #ffcdcd9a;
+}
+
+.taskText {
+    font-size: 1em;
+}
+
+.taskList {
+    border-radius: 15px;
+}
+
+.taskList li {
+    border-radius: 15px;
+}
+
+.buttonIcon {
+    font-size: 1.3em;
+    color: gray;
+}
+
+.checkbox {
+    transform: scale(1.4);
+}
+
+.textFieldListItem {
+    background-color: #FFCDCD;
+    border: 1px solid gray;
+}
+
+.tasksDone {
+    color: gray;
+    text-align: right;
+}
+
+.addTaskButton {
+    color: gray;
+}
+
+.userInputForm {
+    overflow: hidden;
+}
+
+.addListButton {
+    color: gray;
+    font-size: 2.5em;
+}
+
+.edButton:hover i{
+    color: black;
+}
+
+.footerContainer {
+    margin: auto;
+}
+
+.footerContainer a {
+    padding: 0.5em;
+}
+
+hr {
+    width: 90%;
+}
+
+footer i {
+    font-size: 2em;
+    color: gray;
+}
+
+footer i:hover {
+    color: black;
+}
+
+@media screen and (max-width: 479px) {
+    .card {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .editUserInput input {
+        width: 140px;
+    }
+
+    .cardContainer {
+        display: block !important;
+    }
+
+    .addListButton {
+        margin: auto;
+        display: block;
+        margin-top: 25px;
+    }
+
+    .addListButton i {
+        font-size: 1em;
+    }
+}
