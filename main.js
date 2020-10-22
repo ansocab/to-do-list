@@ -32,7 +32,6 @@ titleInputForm.addEventListener("submit", (event) => {
     titleInput.blur();
 });
 
-
 // ADD NEW TASK
 addTaskButton.addEventListener("click", showTextField);
 
@@ -101,9 +100,11 @@ function resetNewTaskField() {
         if (this.id.includes("d")) {
             myList.deleteItem(buttonIndex);
             edButtonsAddEvHandler();
+            checkboxAddEvHandler();
         } else {
             prepareEditItem(buttonIndex)
             edButtonsAddEvHandler();
+            checkboxAddEvHandler();
         }
     }
 
@@ -120,6 +121,7 @@ function resetNewTaskField() {
             const newUserInput = document.querySelector(".editUserInput input");
             myList.editItem(newUserInput.value, index);
             edButtonsAddEvHandler();
+            checkboxAddEvHandler();
         })
     }
 
@@ -137,4 +139,9 @@ function resetNewTaskField() {
         taskDone ? myList.items[checkboxIndex].done = false : myList.items[checkboxIndex].done = true;
         myList.render();
         checkboxAddEvHandler();
+        edButtonsAddEvHandler();
     }
+
+    // ADD NEW LIST BUTTON
+    let newListButton = document.querySelector(".addListButton");
+    newListButton.addEventListener("click", () => {alert("The possibility to add more lists will be added soon... ;)")})
