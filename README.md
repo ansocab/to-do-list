@@ -7,4 +7,5 @@ A To-Do List for travellers
 
 Built with: **HTML, CSS, JavaScript**  
 
-See the website here: https://ansocab.github.io/to-do-list/
+See the website 
+<a href="https://ansocab.github.io/to-do-list/" target="_blank">here</a>.
