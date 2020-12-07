@@ -13,4 +13,4 @@ A basic To-Do List designed for travellers
 
 ## Live Demo
 
-<a href="https://ansocab.github.io/to-do-list/" target="_blank">ansocab.github.io/to-do-list</a>.
+<a href="https://ansocab.github.io/to-do-list/" target="_blank">ansocab.github.io/to-do-list</a>
